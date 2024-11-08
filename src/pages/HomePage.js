@@ -1,26 +1,25 @@
 // src/pages/HomePage.js
 import React from 'react';
-import Header from '../components/Header';
-import ProductList from '../components/ProductList';
-import Footer from '../components/Footer';
+import ProductItem from '../components/ProductItem';
 
-function HomePage() {
+const products = [
+  { id: 1, name: 'Collar para Perro', price: 15.99 },
+  { id: 2, name: 'Juguete para Gato', price: 9.99 },
+  { id: 3, name: 'Cama para Mascotas', price: 29.99 },
+];
+
+const HomePage = () => {
   return (
-    <div>
-      <Header />
-      <main style={{ padding: '20px' }}>
-        <section style={{ textAlign: 'center', marginBottom: '20px' }}>
-          <h2>Bienvenidos a la tienda de la Fundacion Esperanza Animal</h2>
-          <p>Encuentra los mejores accesorios para tu mascota.</p>
-        </section>
-        <section id="galeria">
-          <h3>Galería de Productos</h3>
-          <ProductList />
-        </section>
-      </main>
-      <Footer />
+    <div style={{ padding: "20px" }}>
+      <h2>Bienvenidos a la tienda de accesorios para mascotas</h2>
+      <div style={{ display: "flex", gap: "16px" }}>
+        {products.map((product) => (
+          <ProductItem key={product.id} product={product} />
+        ))}
+      </div>
     </div>
   );
-}
+};
 
 export default HomePage;
+
