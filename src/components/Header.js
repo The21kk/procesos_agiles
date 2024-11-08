@@ -3,10 +3,18 @@ import React from 'react';
 
 function Header() {
   return (
-    <header style={{ padding: '10px', backgroundColor: '#f8f8f8' }}>
-      <h1>Tienda de Fundacion Esperanza Animal</h1>
+    <header style={{
+      backgroundColor: '#ff6f61', // un color llamativo
+      padding: '20px',
+      color: '#fff',
+      textAlign: 'center',
+      boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)'
+    }}>
+      <h1>Tienda de Fundación Esperanza Animal</h1>
       <nav>
-        <a href="#inicio">Inicio</a> | <a href="#carrito">Carrito</a> | <a href="#contacto">Contacto</a>
+        <a href="#home" style={{ margin: '0 10px', color: '#fff' }}>Inicio</a>
+        <a href="#cart" style={{ margin: '0 10px', color: '#fff' }}>Carrito</a>
+        <a href="#contact" style={{ margin: '0 10px', color: '#fff' }}>Contacto</a>
       </nav>
     </header>
   );
